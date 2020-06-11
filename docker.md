@@ -3,8 +3,10 @@
 <https://hub.docker.com/_/microsoft-mssql-server>
 
 ```powershell
+  docker volume create mssqlsystem
+  docker volume create mssqluser
   docker pull mcr.microsoft.com/mssql/server
-  docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=SomePassword!' -p 1433:1433 -d mcr.microsoft.com/mssql/server
+  docker container run -d -p 1433:1433 --volume mssqlsystem:/var/opt/mssql --volume mssqluser:/var/opt/sqlserver -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=password' --name sqlserver mcr.microsoft.com/mssql/server
 ```
 
 # Further Reading
