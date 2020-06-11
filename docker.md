@@ -9,7 +9,7 @@ Documentation on the mssql docker image can be found here - <https://hub.docker.
   docker container run -d -p 1433:1433 --volume mssqlsystem:/var/opt/mssql --volume mssqluser:/var/opt/sqlserver -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=password' --name sqlserver mcr.microsoft.com/mssql/server
 ```
 
-If a new mssql server container is created using the previously create mssqlsystem docker volume then the SA password and EULA being accepted will be persisted and will **NOT** need to be specified when creating the new container.
+If a new mssql server container is created using the previously created mssqlsystem docker volume then the SA password and EULA being accepted will be persisted and will **NOT** need to be specified when creating the new container.
 
 ## Next Steps
 * create a docker volume pre-populated with databse backup files
