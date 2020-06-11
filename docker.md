@@ -1,6 +1,6 @@
 # Setting up SQL Server in docker
 
-<https://hub.docker.com/_/microsoft-mssql-server>
+Documentation on the mssql docker image can be found here - <https://hub.docker.com/_/microsoft-mssql-server>
 
 ```powershell
   docker volume create mssqlsystem
